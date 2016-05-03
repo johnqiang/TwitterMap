@@ -4,8 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+// import each router
 var routes = require('./routes/index');
+var twitter = require('./routes/twitter');
 var users = require('./routes/users');
 
 var app = express();
@@ -22,7 +23,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/twittes', routes);
+// root url for each router
+app.use('/', routes)
+app.use('/TwitterAPI', twitter);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
