@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![](http://res.cloudinary.com/hashnode/image/upload/w_200/v1455647564/static_imgs/mern/imgs/favicon-mern.png)
 
 # mern-starter
@@ -106,3 +107,4 @@ Index.js simply does client side rendering using the data provided from `window.
 
 ## License
 MERN is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+
