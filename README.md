@@ -107,4 +107,3 @@ Index.js simply does client side rendering using the data provided from `window.
 
 ## License
 MERN is released under the [MIT License](http://www.opensource.org/licenses/MIT).
-
