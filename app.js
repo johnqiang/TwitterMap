@@ -4,10 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var elastic = require('./elasticsearch');  
+
 // import each router
 var routes = require('./routes/index');
 var twitter = require('./routes/twitter');
 var users = require('./routes/users');
+
 
 var app = express();
 
@@ -56,6 +59,34 @@ app.use(function(err, req, res, next) {
   res.render('error', {
     message: err.message,
     error: {}
+  });
+});
+
+// elasticsearch init
+elastic.indexExists().then(function (exists) {  
+  if (exists) {
+    return elastic.deleteIndex();
+  }
+}).then(function () {
+  return elastic.initIndex().then(elastic.initMapping).then(function () {
+    //Add a few titles for the autocomplete
+    //elasticsearch offers a bulk functionality as well, but this is for a different time
+    var promises = [
+      'Thing Explainer',
+      'The Internet Is a Playground',
+      'The Pragmatic Programmer',
+      'The Hitchhikers Guide to the Galaxy',
+      'Trial of the Clone'
+    ].map(function (bookTitle) {
+      return elastic.addDocument({
+        title: bookTitle,
+        content: bookTitle + " content",
+        metadata: {
+          titleLength: bookTitle.length
+        }
+      });
+    });
+    return Promise.all(promises);
   });
 });
 
