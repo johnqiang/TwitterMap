@@ -6,7 +6,7 @@ function Header(props, context) {
     <div className="header">
       <div className="header-content">
         <h1 className="site-title">
-          <Link to="/" onClick={props.handleLogoClick}>MERN Starter Blog</Link>
+          <Link to="/" onClick={props.handleLogoClick}>MERN Starter Blog asdf</Link>
         </h1>
         {
           context.router.isActive('/', true)
@@ -23,8 +23,8 @@ Header.contextTypes = {
 };
 
 Header.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  handleLogoClick: PropTypes.func,
+  // onClick: PropTypes.func.isRequired,
+  // handleLogoClick: PropTypes.func,
 };
 
 export default Header;

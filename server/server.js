@@ -29,6 +29,7 @@ import { match, RouterContext } from 'react-router';
 import routes from '../shared/routes';
 import { fetchComponentData } from './util/fetchData';
 import posts from './routes/post.routes';
+import tweets from './routes/twitter';
 import dummyData from './dummyData';
 import serverConfig from './config';
 
@@ -48,7 +49,7 @@ app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../static')));
 app.use('/api', posts);
-
+app.use('/TwitterAPI', tweets);
 // Render Initial HTML
 const renderFullPage = (html, initialState) => {
   const cssPath = process.env.NODE_ENV === 'production' ? '/css/app.min.css' : '/css/app.css';
@@ -62,6 +63,7 @@ const renderFullPage = (html, initialState) => {
         <title>MERN Starter - Blog App</title>
         <link rel="stylesheet" href=${cssPath} />
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'/>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
         <link rel="shortcut icon" href="http://res.cloudinary.com/hashnode/image/upload/v1455629445/static_imgs/mern/mern-favicon-circle-fill.png" type="image/png" />
       </head>
       <body>
