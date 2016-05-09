@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![](http://res.cloudinary.com/hashnode/image/upload/w_200/v1455647564/static_imgs/mern/imgs/favicon-mern.png)
 
 # mern-starter
@@ -6,12 +5,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
-<<<<<<< HEAD
-- Twitter API
-- Elastic Search (new)
-=======
 MERN is a scaffolding tool which makes it easy to build isomorphic apps using Mongo, Express, React and NodeJS. It minimizes the setup time and gets you up to speed using proven technologies.
->>>>>>> dev
 
 - [Website](http://mern.io)
 - [Documentation](http://mern.io/documentation.html)
@@ -20,35 +14,6 @@ MERN is a scaffolding tool which makes it easy to build isomorphic apps using Mo
 ## Quickstart
 
 ```
-<<<<<<< HEAD
-
-- Download [ElasticSearch](https://www.elastic.co/downloads/elasticsearch) [1]
-
-- Install [Marvel](https://www.elastic.co/downloads/marvel) (optional)
-
-- Start elasticsearch
-```bash
-$ bin/elasticsearch
-```
-
-- start marvel (optional)
-```bash
-$ bin/kibana
-```
-
-- Start server
-```bash
-$ npm start
-```
-
-- Test Searching Query with url `localhost:3000/TwitterAPI/search`
-
-- Test ElasticSearch with `http://localhost:3000/documents/suggest/hit` ('hit' is the keyword you want to search)
-
-
-## Reference:
-1. [ElasticSearchDemo](https://blog.raananweber.com/2015/11/24/simple-autocomplete-with-elasticsearch-and-node-js/)
-=======
   npm install -g mern-cli
   mern your_new_app
   cd your_new_app
@@ -141,4 +106,3 @@ Index.js simply does client side rendering using the data provided from `window.
 
 ## License
 MERN is released under the [MIT License](http://www.opensource.org/licenses/MIT).
->>>>>>> dev
