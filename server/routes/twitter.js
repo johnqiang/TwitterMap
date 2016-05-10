@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var config = require('../../config');
+var config = require('../config');
 var Twit = require('twit');
 var T = new Twit({
-  consumer_key:         config.consumer_key,
-  consumer_secret:      config.consumer_secret,
-  access_token:         config.access_token,
-  access_token_secret:  config.access_token_secret,
-  timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+  consumer_key: config.default.consumer_key,
+  consumer_secret: config.default.consumer_secret,
+  access_token: config.default.access_token,
+  access_token_secret: config.default.access_token_secret,
+  timeout_ms: 60*1000,  // optional HTTP request timeout to apply to all requests.
 })
 
 // test url with sample parameter
