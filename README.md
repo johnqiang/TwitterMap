@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-![](http://res.cloudinary.com/hashnode/image/upload/w_200/v1455647564/static_imgs/mern/imgs/favicon-mern.png)
 
-# mern-starter
-![title](https://travis-ci.org/Hashnode/mern-starter.svg?branch=master)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-
-<<<<<<< HEAD
 - Twitter API
 - Elastic Search (new)
 =======
@@ -18,9 +10,6 @@ MERN is a scaffolding tool which makes it easy to build isomorphic apps using Mo
 - [Discussions](https://hashnode.com/n/mern)
 
 ## Quickstart
-
-```
-<<<<<<< HEAD
 
 - Download [ElasticSearch](https://www.elastic.co/downloads/elasticsearch) [1]
 
@@ -115,7 +104,7 @@ app.use((req, res) => {
         });
     });
 });
-```
+
 
 `match` takes two parameters, first is an object that contains routes, location and history and second is a callback function which is called when routes have been matched to a location.
 
