@@ -1,14 +1,14 @@
+
 # TwitterMap
 ### A web application based on MERN Stack(MongoDB replaced by `ElasticSearch`, `Express`, `Nodejs`, `Reactjs`), Twitter Streaming API to realize hot twittes searching and visualization
 
----
+**This is an abandoned version. Please see [@BitTigerInst/ElasticSearch](https://github.com/BitTigerInst/ElasticSearch) for the currently maintained version**
 
 ## Feature (update)
 
 - Twitter API
 - Elastic Search (currently not available)
 
----
 
 ## Install
 
